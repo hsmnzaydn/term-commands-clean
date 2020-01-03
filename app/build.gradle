@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
@@ -15,11 +17,21 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+
+    dataBinding {
+        enabled = true
     }
 }
 
@@ -29,10 +41,20 @@ dependencies {
     implementation appDependencies.appCompat
     implementation appDependencies.ktx
     implementation appDependencies.constraintlayout
+    implementation appDependencies.appCompat
     implementation appDependencies.retrofit
     implementation appDependencies.retrofitConverter
     implementation appDependencies.retrofitAdapter
     implementation appDependencies.retrofitInterceptor
     implementation appDependencies.rxJava
     implementation appDependencies.rxAndroid
+    implementation appDependencies.dagger2
+    implementation appDependencies.daggerKaptCompile
+    implementation appDependencies.daggerKaptProcessor
+    implementation appDependencies.dagger2Android
+    implementation appDependencies.dagger2AndroidSupport
+    implementation appDependencies.lifecycleViewModel
+    implementation appDependencies.lifecycleExtension
+
+
 }

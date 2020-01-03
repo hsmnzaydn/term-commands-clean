@@ -1,18 +1,16 @@
 package com.hsmnzaydn.term_commands_clean.Category.presentation
 
-import com.hsmnzaydn.term_commands_clean.Category.domain.entities.Category
-import com.hsmnzaydn.term_commands_clean.DataManager
+import com.hsmnzaydn.term_commands_clean.Category.domain.usecases.CategoryUseCase
+import com.hsmnzaydn.term_commands_clean.base.BaseInterfaces
 import com.hsmnzaydn.term_commands_clean.base.BaseViewModel
-import com.hsmnzaydn.term_commands_clean.remote.BaseResponseCallBack
+import javax.inject.Inject
 
-class CategoryViewModel(dataManager: DataManager) : BaseViewModel(dataManager) {
+class CategoryViewModel<I : BaseInterfaces> @Inject constructor(private val categoryUseCase: CategoryUseCase) :
+    BaseViewModel<I>() {
 
     
-    fun getCategories(){
-        getDataManager().getCategories(object: BaseResponseCallBack<List<Category>>() {
-            override fun onSuccess(response: List<Category>?) {
-                super.onSuccess(response)
-            }
-        })
+    fun getCategories():String{
+        interfaces.showMessage("aaa")
+        return "aaa"
     }
 }

@@ -6,8 +6,9 @@ import com.hsmnzaydn.term_commands_clean.Category.domain.repository.CategoryRepo
 import com.hsmnzaydn.term_commands_clean.remote.BaseResponseCallBack
 import com.hsmnzaydn.term_commands_clean.remote.ServiceCallback
 import net.serkanozaydin.hsmnzaydn.data.entity.CategoryResponseModel
+import javax.inject.Inject
 
-class CategoryUseCase constructor(private val categoryRepository: CategoryRepository) {
+class CategoryUseCase @Inject constructor( private val categoryRepository: CategoryRepository) {
 
 
     fun getCategories(callback:BaseResponseCallBack<List<Category>>){
