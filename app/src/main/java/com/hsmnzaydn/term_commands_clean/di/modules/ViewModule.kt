@@ -15,9 +15,10 @@ abstract class ViewModule {
     @Binds
     internal abstract fun bindViewModelFactory(factory: ViewModelFactory): ViewModelProvider.Factory
 
+
     @Binds
     @IntoMap
     @ViewModelKey(CategoryViewModel::class)
-    internal abstract fun mainScreenViewModel(viewModel: CategoryViewModel<BaseInterfaces>): ViewModel
+    internal abstract fun categoryViewModel(viewModel: CategoryViewModel<BaseInterfaces>): ViewModel
 
 }

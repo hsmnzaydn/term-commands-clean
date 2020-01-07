@@ -8,7 +8,10 @@ import dagger.android.ContributesAndroidInjector
 
 @Module
 abstract class ActivityInjectorModules {
+
     @ActivityScope
     @ContributesAndroidInjector
-    abstract fun mainScreenActivityActivityInjector(): CategoryActivity
+    abstract fun categoryActivityInjector(): CategoryActivity
+
+
 }

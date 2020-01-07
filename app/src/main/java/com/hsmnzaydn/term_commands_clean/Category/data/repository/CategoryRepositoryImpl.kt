@@ -12,10 +12,12 @@ import javax.inject.Inject
 class CategoryRepositoryImpl (
     retrofit: Retrofit,
     gson: Gson
-):  CategoryRepository
+):BaseServicesImp(retrofit, gson) , CategoryRepository
 {
     override fun getCategories(serviceCallback: ServiceCallback<List<CategoryResponseModel>>) {
-
+        getRequest(serviceCallback){
+            getCategoryServices().getCategories()
+        }
     }
 
 

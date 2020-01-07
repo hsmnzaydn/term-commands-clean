@@ -61,9 +61,5 @@ class NetworkModule {
 
 
 
-    @Provides
-    @Singleton
-    fun providePostRepository(retrofit: Retrofit,gson: Gson): CategoryRepository {
-        return CategoryRepositoryImpl(retrofit,gson)
-    }
+
 }
