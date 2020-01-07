@@ -26,3 +26,29 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+ext {
+    retrofitVersion = '2.6.0'
+    retrofitGsonConverterVersion = '2.6.0'
+    retrofitLoggerVersion = '3.9.1'
+    retrofitRxAdapterVersion = '2.6.0'
+    rxjava2Version = '2.2.4'
+    rxandroidVersion = '2.1.0'
+
+    dagger2Version = '2.21'
+
+    materialVersion = 'material:1.1.0-alpha06'
+    designVersion = '28.0.0'
+
+    facebookSDK = '5.11.0'
+    twitterSdkVersion = '3.1.1'
+    googleAuthVersion = '17.0.0'
+    //googleFitnessVersion = '17.0.0'
+
+    firebaseAuthVersion = '18.0.0'
+
+    picassoVersion = '2.71828'
+    exoPlayerVersion = '2.8.4'
+
+    lifecycle = '2.0.0'
+}

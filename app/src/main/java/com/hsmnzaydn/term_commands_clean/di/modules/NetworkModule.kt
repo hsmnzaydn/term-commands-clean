@@ -2,6 +2,8 @@ package com.hsmnzaydn.term_commands_clean.di.modules
 
 import android.content.Context
 import com.google.gson.Gson
+import com.hsmnzaydn.term_commands_clean.Category.data.repository.CategoryRepositoryImpl
+import com.hsmnzaydn.term_commands_clean.Category.domain.repository.CategoryRepository
 import dagger.Module
 import dagger.Provides
 import okhttp3.*
@@ -14,7 +16,6 @@ import javax.inject.Singleton
 
 @Module
 class NetworkModule {
-
 
     @Singleton
     @Provides
@@ -29,8 +30,7 @@ class NetworkModule {
         val loggingInterceptor = HttpLoggingInterceptor()
         loggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
         val okHttpClient = OkHttpClient.Builder()
-            .readTimeout(60, TimeUnit.SECONDS)
-            .connectTimeout(60, TimeUnit.SECONDS)
+
             .cache(cache)
 
             .addInterceptor(object : Interceptor {
@@ -38,6 +38,11 @@ class NetworkModule {
 
                     var request: Request =
                         chain.request().newBuilder()
+                            .addHeader("Accept", "/")
+                            .addHeader("Accept-Encoding", "gzip, deflate")
+                            .addHeader("User-Agent", "runscope/0.1")
+                            .addHeader("Content-Type", "application/json")
+                            .addHeader("Language", "TR")
                             .build()
 
                     return chain.proceed(request)
@@ -46,11 +51,19 @@ class NetworkModule {
             })
             .addInterceptor(loggingInterceptor)
             .build()
-        return Retrofit.Builder().baseUrl("http://terminalcommands.herokuapp.com/api/").client(okHttpClient)
+
+
+        return Retrofit.Builder().baseUrl("").client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create()).build()
 
     }
 
 
+
+    @Provides
+    @Singleton
+    fun providePostRepository(retrofit: Retrofit,gson: Gson): CategoryRepository {
+        return CategoryRepositoryImpl(retrofit,gson)
+    }
 }

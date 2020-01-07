@@ -7,7 +7,7 @@ import com.hsmnzaydn.term_commands_clean.base.BaseActivity
 import com.hsmnzaydn.term_commands_clean.base.BaseInterfaces
 import com.hsmnzaydn.term_commands_clean.databinding.ActivityCategoryBinding
 
-
+@Suppress("UNREACHABLE_CODE")
 class CategoryActivity : BaseActivity<ActivityCategoryBinding, CategoryViewModel<BaseInterfaces>>()  {
 
     override fun layoutRes(): Int  = R.layout.activity_category
@@ -16,6 +16,6 @@ class CategoryActivity : BaseActivity<ActivityCategoryBinding, CategoryViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //viewModel.getCategories()
+        viewModel.getCategories()
     }
 }

@@ -1,21 +1,16 @@
-package com.basefy.burger_king.di.modules
+package com.hsmnzaydn.term_commands_clean.di.modules
 
-import TermApplication
 import android.app.Application
 import android.content.Context
+import com.hsmnzaydn.term_commands_clean.TermApplication
+import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
 
 @Module
-class AppModule {
+abstract class AppModule {
 
-    @Provides
-    @Singleton
-    fun provideApplication(app: TermApplication): Application = app
-
-    @Provides
-    @Singleton
-    fun provideApplicationContext(app: TermApplication): Context = app.applicationContext
-
+    @Binds
+    abstract fun provideContext(application: TermApplication): Context
 }

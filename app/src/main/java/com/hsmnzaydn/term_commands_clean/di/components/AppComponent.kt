@@ -1,8 +1,8 @@
-package com.basefy.burger_king.di.components
+package com.hsmnzaydn.term_commands_clean.di.components
 
-import TermApplication
-import com.basefy.burger_king.di.modules.AppModule
+import com.hsmnzaydn.term_commands_clean.TermApplication
 import com.hsmnzaydn.term_commands_clean.di.modules.ActivityInjectorModules
+import com.hsmnzaydn.term_commands_clean.di.modules.AppModule
 import com.hsmnzaydn.term_commands_clean.di.modules.NetworkModule
 import com.hsmnzaydn.term_commands_clean.di.modules.ViewModule
 import dagger.BindsInstance
@@ -14,8 +14,8 @@ import javax.inject.Singleton
 @Component(
     modules = [
         AndroidSupportInjectionModule::class,
-        AppModule::class,
         ActivityInjectorModules::class,
+        AppModule::class,
         NetworkModule::class,
         ViewModule::class
     ]
