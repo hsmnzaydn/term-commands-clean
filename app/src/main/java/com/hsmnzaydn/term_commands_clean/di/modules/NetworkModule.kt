@@ -2,8 +2,7 @@ package com.hsmnzaydn.term_commands_clean.di.modules
 
 import android.content.Context
 import com.google.gson.Gson
-import com.hsmnzaydn.term_commands_clean.Category.data.repository.CategoryRepositoryImpl
-import com.hsmnzaydn.term_commands_clean.Category.domain.repository.CategoryRepository
+import com.hsmnzaydn.term_commands_clean.BuildConfig
 import dagger.Module
 import dagger.Provides
 import okhttp3.*
@@ -11,7 +10,6 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
-import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
 @Module
@@ -53,7 +51,7 @@ class NetworkModule {
             .build()
 
 
-        return Retrofit.Builder().baseUrl("").client(okHttpClient)
+        return Retrofit.Builder().baseUrl(BuildConfig.BASE_URL).client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create()).build()
 

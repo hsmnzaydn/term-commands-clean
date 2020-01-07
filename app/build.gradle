@@ -25,8 +25,24 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+        }
+        development {
+            debuggable true
+
+
+        }
+    }
+
+    productFlavors {
+        flavorDimensions "version"
+
+        beta {
+            buildConfigField "String", "BASE_URL", '"hhttp://terminalcommands.herokuapp.com/api/"'
+        }
+        full {
+            buildConfigField "String", "BASE_URL", '"http://terminalcommands.herokuapp.com/api/"'
         }
     }
 
