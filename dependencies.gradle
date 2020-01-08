@@ -25,6 +25,10 @@ ext{
     //Lifecycle
     lifecycleVersion = '2.0.0'
 
+    //View
+    recylerviewVersion = '1.0.0'
+    cardViewVersion = '1.0.0'
+
     appDependencies = [
             retrofit : "com.squareup.retrofit2:retrofit:$retrofitVersion",
             retrofitConverter: "com.squareup.retrofit2:converter-gson:$retrofitVersion",
@@ -42,7 +46,9 @@ ext{
             dagger2Android: "com.google.dagger:dagger-android:$dagger2Version",
             dagger2AndroidSupport: "com.google.dagger:dagger-android-support:$dagger2Version",
             lifecycleViewModel: "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion",
-            lifecycleExtension: "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"
+            lifecycleExtension: "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion",
+            retrofit:"androidx.recyclerview:recyclerview:$recylerviewVersion",
+            cardView: "androidx.cardview:cardview:$cardViewVersion"
 
     ]
 

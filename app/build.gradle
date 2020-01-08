@@ -23,14 +23,30 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    signingConfigs {
+        beta {
+            storeFile file('.betakey')
+            keyAlias '.betakey'
+            keyPassword '.betakey'
+            storePassword '.betakey'
+        }
+
+        release {
+            storeFile file('.betakey')
+            keyAlias '.betakey'
+            keyPassword '.betakey'
+            storePassword '.betakey'
+        }
+    }
+
     buildTypes {
         release {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-
+            signingConfig signingConfigs.release
         }
         development {
             debuggable true
-
+            signingConfig signingConfigs.beta
 
         }
     }
@@ -39,7 +55,7 @@ android {
         flavorDimensions "version"
 
         beta {
-            buildConfigField "String", "BASE_URL", '"hhttp://terminalcommands.herokuapp.com/api/"'
+            buildConfigField "String", "BASE_URL", '"http://terminalcommands.herokuapp.com/api/"'
         }
         full {
             buildConfigField "String", "BASE_URL", '"http://terminalcommands.herokuapp.com/api/"'
@@ -71,6 +87,8 @@ dependencies {
     implementation appDependencies.dagger2AndroidSupport
     implementation appDependencies.lifecycleViewModel
     implementation appDependencies.lifecycleExtension
+    implementation appDependencies.retrofit
+    implementation appDependencies.cardView
 
 
 }

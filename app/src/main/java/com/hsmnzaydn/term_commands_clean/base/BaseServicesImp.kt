@@ -26,7 +26,7 @@ open class BaseServicesImp  constructor(
         }
 
     fun <T > onNext(callback: ServiceCallback<T>): (T) -> Unit = {
-
+        callback.onSuccess(it)
     }
 
     override fun getCategoryServices(): CategoryServices {
