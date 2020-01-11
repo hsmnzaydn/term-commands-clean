@@ -10,6 +10,7 @@ fun CategoryResponseModel.toCategory() = Category(
     title = this.title.let { it }
 )
 
-fun CategoryResponseModel.toCategoryCellItem() = CategoryRecylerViewItem.CategoryCellItem(
-    category = this.toCategory()?.let { it }
+fun CategoryResponseModel.toCategoryCellItem(position:Int) = CategoryRecylerViewItem.CategoryCellItem(
+    category = this.toCategory()?.let { it },
+    position = position
 )

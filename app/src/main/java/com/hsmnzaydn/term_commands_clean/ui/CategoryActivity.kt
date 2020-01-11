@@ -32,6 +32,7 @@ class CategoryActivity : BaseActivity<ActivityCategoryBinding, CategoryViewModel
 
         viewModel.categoryListLiveData.observe(this, Observer<List<CategoryRecylerViewItem.CategoryCellItem>> {
             categoryRecylerViewAdapter.submitList(it)
+
         })
 
     }
