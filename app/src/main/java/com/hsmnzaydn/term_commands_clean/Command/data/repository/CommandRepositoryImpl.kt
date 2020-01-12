@@ -1,23 +1,24 @@
 package com.hsmnzaydn.term_commands_clean.Category.data.repository
 
-import com.hsmnzaydn.term_commands_clean.base.BaseServicesImp
+import com.basefy.base_mvvm_libraries.network.BaseServiceCallback
+import com.basefy.base_mvvm_libraries.network.BaseServicesImp
 import com.google.gson.Gson
+import com.hsmnzaydn.term_commands_clean.Category.data.api.CommandServices
 import com.hsmnzaydn.term_commands_clean.Category.domain.repository.CommandRepository
 import com.hsmnzaydn.term_commands_clean.Command.data.entities.CommandResponseModel
-import com.hsmnzaydn.term_commands_clean.remote.ServiceCallback
 import retrofit2.Retrofit
 
 class CommandRepositoryImpl (
-    retrofit: Retrofit,
+   private val retrofit: Retrofit,
     gson: Gson
 ): BaseServicesImp(retrofit, gson) , CommandRepository
 {
     override fun getCommandList(
         categoryId: String,
-        serviceCallback: ServiceCallback<List<CommandResponseModel>>
+        serviceCallback: BaseServiceCallback<List<CommandResponseModel>>
     ) {
         getRequest(serviceCallback){
-            getCommandServices().getCommandList(categoryId)
+            retrofit.create(CommandServices::class.java).getCommandList(categoryId)
         }
     }
 

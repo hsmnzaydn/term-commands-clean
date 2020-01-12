@@ -1,7 +1,7 @@
 package com.hsmnzaydn.term_commands_clean.ui.category.model
 
+import com.basefy.base_mvvm_libraries.ui.adapter.RecyclerItem
 import com.hsmnzaydn.term_commands_clean.Category.domain.entities.Category
-import com.hsmnzaydn.term_commands_clean.base.RecyclerItem
 import com.hsmnzaydn.term_commands_clean.ui.category.adapter.CategoryViewHolder
 
 sealed class CategoryRecylerViewItem(override val layoutId: Int) : RecyclerItem {

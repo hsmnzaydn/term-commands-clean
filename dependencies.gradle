@@ -50,6 +50,9 @@ ext{
             retrofit:"androidx.recyclerview:recyclerview:$recylerviewVersion",
             cardView: "androidx.cardview:cardview:$cardViewVersion"
 
+
+
+
     ]
 
 

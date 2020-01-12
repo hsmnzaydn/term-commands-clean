@@ -1,18 +1,10 @@
 package com.hsmnzaydn.term_commands_clean.base
-
-import com.hsmnzaydn.term_commands_clean.remote.ServiceCallback
+import com.basefy.base_mvvm_libraries.network.BaseServiceCallback
+import com.basefy.base_mvvm_libraries.ui.activity.BaseResponseCallBack
 
 
 abstract class BaseResponseCallBack<R> constructor(
     private val baseInterfaces: BaseInterfaces
-) : ServiceCallback<R> {
+) : BaseServiceCallback<R>, BaseResponseCallBack<R>(baseInterfaces) {
 
-    override fun onSuccess(response: R?) {
-        baseInterfaces.hideLoading()
-    }
-
-    override fun onError(errorCode: Int, errorMessage: String) {
-        baseInterfaces.hideLoading()
-        baseInterfaces.showMessage(errorMessage)
-    }
 }

@@ -3,6 +3,7 @@ package com.hsmnzaydn.term_commands_clean.ui.category
 import android.os.Bundle
 import android.util.Log
 import androidx.lifecycle.Observer
+import com.basefy.base_mvvm_libraries.utility.vertical
 import com.hsmnzaydn.term_commands_clean.Category.presentation.CategoryViewModel
 import com.hsmnzaydn.term_commands_clean.R
 import com.hsmnzaydn.term_commands_clean.base.BaseActivity
@@ -12,7 +13,6 @@ import com.hsmnzaydn.term_commands_clean.ui.category.adapter.CategoryRecylerView
 import com.hsmnzaydn.term_commands_clean.ui.category.interfaces.CategoryCallback
 import com.hsmnzaydn.term_commands_clean.ui.category.model.CategoryRecylerViewItem
 import com.hsmnzaydn.term_commands_clean.ui.command.CommandActivity
-import com.hsmnzaydn.term_commands_clean.utils.vertical
 import kotlinx.android.synthetic.main.activity_category.*
 
 @Suppress("UNREACHABLE_CODE")

@@ -15,8 +15,9 @@ class CommandViewModel<I : BaseInterfaces> @Inject constructor(private val comma
 
 
     fun getCommandOfCategories(categoryId:String){
-        interfaces.showLoading()
-        commandUseCase.getCommandList(categoryId,object:BaseResponseCallBack<List<CommandRecylerViewItem.CommandCellItem>>(interfaces){
+        view.showLoading()
+
+        commandUseCase.getCommandList(categoryId,object:BaseResponseCallBack<List<CommandRecylerViewItem.CommandCellItem>>(view){
             override fun onSuccess(response: List<CommandRecylerViewItem.CommandCellItem>?) {
                 super.onSuccess(response)
                 commandListLiveData.value = response

@@ -15,8 +15,8 @@ class CategoryViewModel<I : BaseInterfaces> @Inject constructor(private val cate
 
 
     fun getCategories(){
-        interfaces.showLoading()
-        categoryUseCase.getCategories(object :BaseResponseCallBack<List<CategoryRecylerViewItem.CategoryCellItem>>(interfaces){
+        view.showLoading()
+        categoryUseCase.getCategories(object :BaseResponseCallBack<List<CategoryRecylerViewItem.CategoryCellItem>>(view){
             override fun onSuccess(response: List<CategoryRecylerViewItem.CategoryCellItem>?) {
                 categoryListLiveData.value = response
                 super.onSuccess(response)
