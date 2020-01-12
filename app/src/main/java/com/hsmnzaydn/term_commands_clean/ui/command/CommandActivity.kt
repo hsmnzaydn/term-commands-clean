@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import androidx.lifecycle.Observer
+import com.basefy.base_mvvm_libraries.utility.vertical
 import com.hsmnzaydn.term_commands_clean.Command.presentation.CommandViewModel
 import com.hsmnzaydn.term_commands_clean.R
 import com.hsmnzaydn.term_commands_clean.base.BaseActivity
@@ -12,7 +13,6 @@ import com.hsmnzaydn.term_commands_clean.databinding.ActivityCommandBinding
 import com.hsmnzaydn.term_commands_clean.ui.command.adapter.CommandRecylerViewAdapter
 import com.hsmnzaydn.term_commands_clean.ui.command.model.CommandRecylerViewItem
 import com.hsmnzaydn.term_commands_clean.utils.BundleConstant
-import com.hsmnzaydn.term_commands_clean.utils.vertical
 import kotlinx.android.synthetic.main.activity_command.*
 
 class CommandActivity : BaseActivity<ActivityCommandBinding, CommandViewModel<BaseInterfaces>>()  {

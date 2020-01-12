@@ -2,11 +2,11 @@ package com.hsmnzaydn.term_commands_clean.di.modules
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.basefy.base_mvvm_libraries.di.ViewModelFactory
 import com.hsmnzaydn.term_commands_clean.Category.presentation.CategoryViewModel
 import com.hsmnzaydn.term_commands_clean.Command.presentation.CommandViewModel
 import com.hsmnzaydn.term_commands_clean.base.BaseInterfaces
-import com.tunc.mvvm_architecture.di.ViewModelFactory
-import com.tunc.mvvm_architecture.di.ViewModelKey
+import com.hsmnzaydn.term_commands_clean.di.ViewModelKey
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap

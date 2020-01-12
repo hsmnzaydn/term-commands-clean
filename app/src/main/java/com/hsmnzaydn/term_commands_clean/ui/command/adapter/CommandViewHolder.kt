@@ -1,8 +1,8 @@
 package com.hsmnzaydn.term_commands_clean.ui.command.adapter
 
 import android.view.ViewGroup
+import com.basefy.base_mvvm_libraries.ui.adapter.BaseViewHolder
 import com.hsmnzaydn.term_commands_clean.R
-import com.hsmnzaydn.term_commands_clean.base.BaseViewHolder
 import com.hsmnzaydn.term_commands_clean.databinding.RowCommandBinding
 import com.hsmnzaydn.term_commands_clean.ui.command.model.CommandRecylerViewItem
 

@@ -1,4 +1,4 @@
-package com.tunc.mvvm_architecture.di
+package com.hsmnzaydn.term_commands_clean.di
 
 import androidx.lifecycle.ViewModel
 import dagger.MapKey

@@ -91,6 +91,6 @@ dependencies {
     implementation appDependencies.lifecycleExtension
     implementation appDependencies.retrofit
     implementation appDependencies.cardView
-
+    implementation 'com.github.Basefy:base-mvvm-library:1.2.0'
 
 }
