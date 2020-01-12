@@ -1,6 +1,6 @@
 package com.hsmnzaydn.term_commands_clean.Category.data.repository
 
-import com.basefy.burger_king.data.network.services.BaseServicesImp
+import com.hsmnzaydn.term_commands_clean.base.BaseServicesImp
 import com.google.gson.Gson
 import com.hsmnzaydn.term_commands_clean.Category.domain.repository.CommandRepository
 import com.hsmnzaydn.term_commands_clean.Command.data.entities.CommandResponseModel
@@ -10,7 +10,7 @@ import retrofit2.Retrofit
 class CommandRepositoryImpl (
     retrofit: Retrofit,
     gson: Gson
-):BaseServicesImp(retrofit, gson) , CommandRepository
+): BaseServicesImp(retrofit, gson) , CommandRepository
 {
     override fun getCommandList(
         categoryId: String,

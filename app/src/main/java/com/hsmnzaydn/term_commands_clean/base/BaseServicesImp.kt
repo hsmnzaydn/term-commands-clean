@@ -1,5 +1,6 @@
-package com.basefy.burger_king.data.network.services
+package com.hsmnzaydn.term_commands_clean.base
 
+import com.basefy.burger_king.data.network.services.BaseServices
 import com.google.gson.Gson
 import com.hsmnzaydn.term_commands_clean.Category.data.api.CategoryServices
 import com.hsmnzaydn.term_commands_clean.Category.data.api.CommandServices
