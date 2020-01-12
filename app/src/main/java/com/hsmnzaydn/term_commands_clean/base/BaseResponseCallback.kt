@@ -8,10 +8,11 @@ abstract class BaseResponseCallBack<R> constructor(
 ) : ServiceCallback<R> {
 
     override fun onSuccess(response: R?) {
-
+        baseInterfaces.hideLoading()
     }
 
     override fun onError(errorCode: Int, errorMessage: String) {
+        baseInterfaces.hideLoading()
         baseInterfaces.showMessage(errorMessage)
     }
 }
