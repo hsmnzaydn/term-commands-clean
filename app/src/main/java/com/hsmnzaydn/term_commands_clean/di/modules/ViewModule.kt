@@ -3,6 +3,7 @@ package com.hsmnzaydn.term_commands_clean.di.modules
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.hsmnzaydn.term_commands_clean.Category.presentation.CategoryViewModel
+import com.hsmnzaydn.term_commands_clean.Command.presentation.CommandViewModel
 import com.hsmnzaydn.term_commands_clean.base.BaseInterfaces
 import com.tunc.mvvm_architecture.di.ViewModelFactory
 import com.tunc.mvvm_architecture.di.ViewModelKey
@@ -21,4 +22,8 @@ abstract class ViewModule {
     @ViewModelKey(CategoryViewModel::class)
     internal abstract fun categoryViewModel(viewModel: CategoryViewModel<BaseInterfaces>): ViewModel
 
+    @Binds
+    @IntoMap
+    @ViewModelKey(CommandViewModel::class)
+    internal abstract fun commandViewModel(viewModel: CommandViewModel<BaseInterfaces>): ViewModel
 }

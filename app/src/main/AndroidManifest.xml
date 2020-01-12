@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.CategoryActivity">
+        <activity android:name=".ui.command.CommandActivity"></activity>
+        <activity android:name=".ui.category.CategoryActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

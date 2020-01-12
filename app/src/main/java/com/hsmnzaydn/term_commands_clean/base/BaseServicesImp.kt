@@ -2,6 +2,7 @@ package com.basefy.burger_king.data.network.services
 
 import com.google.gson.Gson
 import com.hsmnzaydn.term_commands_clean.Category.data.api.CategoryServices
+import com.hsmnzaydn.term_commands_clean.Category.data.api.CommandServices
 import com.hsmnzaydn.term_commands_clean.remote.NetworkError
 import com.hsmnzaydn.term_commands_clean.remote.ServiceCallback
 import io.reactivex.Observable
@@ -32,6 +33,11 @@ open class BaseServicesImp  constructor(
     override fun getCategoryServices(): CategoryServices {
         return retrofit.create(CategoryServices::class.java)
     }
+
+    override fun getCommandServices(): CommandServices {
+        return retrofit.create(CommandServices::class.java)
+    }
+
 
 
 

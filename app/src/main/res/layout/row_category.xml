@@ -9,11 +9,17 @@
             name="data"
             type="com.hsmnzaydn.term_commands_clean.ui.category.model.CategoryRecylerViewItem.CategoryCellItem" />
 
+        <variable
+            name="callback"
+            type="com.hsmnzaydn.term_commands_clean.ui.category.interfaces.CategoryCallback" />
     </data>
+
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        app:cardBackgroundColor="@color/cardview_dark_background">
+        app:cardBackgroundColor="@color/cardview_dark_background"
+        android:onClick="@{(view) -> callback.onClickCategory(data.category.id)}">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

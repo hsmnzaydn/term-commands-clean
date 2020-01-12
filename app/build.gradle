@@ -81,6 +81,8 @@ dependencies {
     implementation appDependencies.rxJava
     implementation appDependencies.rxAndroid
     implementation appDependencies.dagger2
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     kapt appDependencies.daggerKaptCompile
     kapt appDependencies.daggerKaptProcessor
     implementation appDependencies.dagger2Android

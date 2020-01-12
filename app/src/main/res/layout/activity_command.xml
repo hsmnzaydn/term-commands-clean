@@ -6,7 +6,6 @@
 
     <data>
 
-
     </data>
 
 
@@ -16,7 +15,7 @@
         tools:context=".ui.category.CategoryActivity">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/activity_category_recylerView"
+            android:id="@+id/activity_command_recylerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -24,5 +23,4 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </layout>

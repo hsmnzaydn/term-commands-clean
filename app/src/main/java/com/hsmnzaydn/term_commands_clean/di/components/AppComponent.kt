@@ -6,6 +6,7 @@ import com.hsmnzaydn.term_commands_clean.di.modules.AppModule
 import com.hsmnzaydn.term_commands_clean.di.modules.NetworkModule
 import com.hsmnzaydn.term_commands_clean.di.modules.ViewModule
 import com.hsmnzaydn.term_commands_clean.di.modules.category.CategoryModule
+import com.hsmnzaydn.term_commands_clean.di.modules.command.CommandModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.support.AndroidSupportInjectionModule
@@ -19,7 +20,8 @@ import javax.inject.Singleton
         AppModule::class,
         NetworkModule::class,
         ViewModule::class,
-        CategoryModule::class
+        CategoryModule::class,
+        CommandModule::class
     ]
 )
 interface AppComponent {
