@@ -1,20 +1,20 @@
-package com.hsmnzaydn.term_commands_clean.ui.category.adapter
+package com.hsmnzaydn.term_commands_clean.ui.command.adapter
 
 import android.view.ViewGroup
 import androidx.databinding.ViewDataBinding
 import com.hsmnzaydn.term_commands_clean.base.RecyclerItem
 import com.hsmnzaydn.term_commands_clean.base.BaseRecyclerAdapter
 import com.hsmnzaydn.term_commands_clean.base.BaseViewHolder
-import com.hsmnzaydn.term_commands_clean.ui.category.model.CategoryRecylerViewItem
+import com.hsmnzaydn.term_commands_clean.ui.category.adapter.CategoryViewHolder
 
-class CategoryRecylerViewAdapter  : BaseRecyclerAdapter<RecyclerItem, BaseViewHolder<RecyclerItem, ViewDataBinding>>() {
+class CommandRecylerViewAdapter  : BaseRecyclerAdapter<RecyclerItem, BaseViewHolder<RecyclerItem, ViewDataBinding>>() {
 
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
         when (viewType) {
-            CategoryViewHolder.LAYOUT_ID -> CategoryViewHolder(parent)
-            else -> CategoryViewHolder(parent)
+            CommandViewHolder.LAYOUT_ID -> CommandViewHolder(parent)
+            else -> CommandViewHolder(parent)
         } as BaseViewHolder<RecyclerItem, ViewDataBinding>
 
 

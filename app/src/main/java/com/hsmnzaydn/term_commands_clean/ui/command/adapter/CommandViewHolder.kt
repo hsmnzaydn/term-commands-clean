@@ -1,12 +1,10 @@
-package com.hsmnzaydn.term_commands_clean.ui.category.adapter
+package com.hsmnzaydn.term_commands_clean.ui.command.adapter
 
 import android.view.ViewGroup
 import com.hsmnzaydn.term_commands_clean.R
-import com.hsmnzaydn.term_commands_clean.ui.category.model.CategoryRecylerViewItem
 import com.hsmnzaydn.term_commands_clean.base.BaseViewHolder
-import com.hsmnzaydn.term_commands_clean.databinding.RowCategoryBinding
 import com.hsmnzaydn.term_commands_clean.databinding.RowCommandBinding
-import com.hsmnzaydn.term_commands_clean.ui.category.model.CommandRecylerViewItem
+import com.hsmnzaydn.term_commands_clean.ui.command.model.CommandRecylerViewItem
 
 class CommandViewHolder(parent: ViewGroup) : BaseViewHolder<CommandRecylerViewItem.CommandCellItem, RowCommandBinding>(parent, LAYOUT_ID) {
 
