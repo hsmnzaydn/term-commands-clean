@@ -26,7 +26,7 @@ class CommandActivity : BaseActivity<ActivityCommandBinding, CommandViewModel<Ba
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 //
-
+//
         viewModel.getCommandOfCategories(intent.getStringExtra(BundleConstant.CATEGORY_ID_BUNDLE))
 
 
