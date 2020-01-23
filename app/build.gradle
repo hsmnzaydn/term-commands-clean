@@ -6,6 +6,11 @@ apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'kotlin-kapt'
 
+apply plugin: 'com.google.gms.google-services'
+
+
+apply plugin: 'com.google.firebase.appdistribution'
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
@@ -43,11 +48,18 @@ android {
         release {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
+            firebaseAppDistribution {
+                groups = "seko"
+                releaseNotes = "Search ekranında düzenlemeler yapıldı"
+            }
         }
         development {
             debuggable true
             signingConfig signingConfigs.beta
-
+            firebaseAppDistribution {
+                groups = "seko"
+                releaseNotes = "Search ekranında düzenlemeler yapıldı"
+            }
         }
     }
 
